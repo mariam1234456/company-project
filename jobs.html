@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job page</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <div class="container-fluid">
+            <!--Start Of brand-->
+            <a class="brandGradient navbar-brand" href="dash.html">EMS2.0</a>
+            <!--End Of brand-->
+            <!--Start Of Togglar-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--End Of Togglar-->
+            <div class="collapse navbar-collapse small" id="navbarSupportedContent">
+                <!--Start Of Navbar Item-->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="dash.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="employee.html">Employees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="jobs.html">Jobs</a>
+                    </li>
+                </ul>
+                <!--End Of Navbar Item-->
+                <form class="d-flex gap-3" role="search">
+                    <!--input group-->
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search for..." />
+                        <button class="btn btn-success btn-sm" type="button" id="button-addon2"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <!--Vertical rule-->
+                    <div class="vr text-white"></div>
+                    <button class="btn btn-warning btn-sm" type="button" id="button-addon2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-power" viewBox="0 0 16 16">
+                            <path d="M7.5 1v7h1V1h-1z" />
+                            <path
+                                d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid mt-3">
+        <div class="row justify-content-center gap-1">
+            <div class="col-md-2">
+                <ul class="list-group shadow small mb-3">
+                    <li class="list-group-item active">Jobs Data</li>
+                    <a href="#exampleModalToggle" class="list-group-item list-group-item-action list-group-item-action"
+                        data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Add Job</a>
+                    <div class="modal fade" style="backdrop-filter: blur(5px)" data-bs-backdrop="static"
+                        id="exampleModalToggle">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header text-bg-dark" data-bs-theme="dark">
+                                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Add Job Details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row mt-3">
+                                            <div class="col">
+                                                <input type="date" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col">
+                                                <input type="text" class="form-control" placeholder="Job Name">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="container d-flex mb-3">
+                                    <a href="jobs.html" type="button" class="btn btn-success w-100 me-3"
+                                        data-bs-dismiss="modal">Add
+                                        Job</a> <a href="jobs.html" type="button" class="btn btn-warning"
+                                        data-bs-dismiss="modal">Close</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <ul class="list-group shadow small mb-3">
+                    <li class="list-group-item active">Related Links</li>
+                    <a href="employee.html"
+                        class="list-group-item list-group-item-action list-group-item-action">Employees List</a>
+                </ul>
+            </div>
+            <div class="col-md-8 ">
+                <table class="table table-bordered caption-top table-sm">
+                    <caption class="text-bg-dark text-center rounded-top ">Jobs List</caption>
+                    <thead class="table-secondary small">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Details</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-middle">
+                        <tr>
+                            <td scope="row">1</td>
+                            <td>Graphic Designer</td>
+                            <!--Details-->
+                            <td><a href="#" class="btn btn-sb btn-primary d-block"
+                                    data-bs-target="#employeedetailsModal" data-bs-toggle="modal">Details</a>
+                                <div class="modal fade" id="employeedetailsModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
+                                    style="backdrop-filter: blur(5px)" data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header text-bg-dark" data-bs-theme="dark">
+                                                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Job Details
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body p-0 m-0">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <table id="customTable"
+                                                            class="table table-bordered table-sm small mb-0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th class="w-50 " scope="row">ID</th>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Job Name</th>
+                                                                    <td>Graphic Designer</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button data-bs-toggle="modal" data-bs-target="#editemployeeModel"
+                                                    type="button" class="btn btn-warning btn-sm">
+                                                    Edit Details
+                                                </button>
+                                                <button data-bs-dismiss="modal" type="button"
+                                                    class="btn btn-primary btn-sm">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </th>
+                            </td>
+                            <!--Edit-->
+                            <td><a href="#" class="btn btn-sb btn-warning      d-block"
+                                    data-bs-target="#editemployeeModel" data-bs-toggle="modal">Edit</a>
+                                <div class="modal fade" id="editemployeeModel" style="backdrop-filter: blur(5px)"
+                                    data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header text-bg-dark" data-bs-theme="dark">
+                                                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Job
+                                                    Details</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="row mt-3">
+                                                        <div class="col">
+                                                            <input type="date" class="form-control" value="2009-07-19">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="input-group mb-3">
+                                                            <select class="form-select">
+                                                                <option value="0" disabled>Select Job</option>
+                                                                <option selected>Doctor</option>
+                                                                <option>Teachre</option>
+                                                                <option>Web Developer</option>
+                                                                <option>Programmer</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="container d-flex mb-3">
+                                                <a href="employee.html" type="button" class="btn btn-success w-100 me-3"
+                                                    data-bs-dismiss="modal">Update
+                                                    Job</a> <a href="employee.html" type="button"
+                                                    class="btn btn-warning" data-bs-dismiss="modal">Close</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <!--Delete-->
+                            <td><a href="#" class="btn btn-sb btn-danger d-block" data-bs-target="#deletemployeemodel"
+                                    data-bs-toggle="modal">Delete</a>
+                                <div class="modal fade" style="backdrop-filter: blur(5px)" data-bs-backdrop="static"
+                                    id="deletemployeemodel" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <label class="fw-light fs-4 text-center">Do you want to delete the
+                                                    Job<b>
+                                                        "Graphic Designer" ?
+                                                    </b> </label>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="col-md-12 text-center">
+                                                    <a href="employee.html" type="button" class="btn   btn-danger"
+                                                        data-bs-dismiss="modal">YES!</a>
+                                                    <a href="employee.html" type="button" class="btn btn-warning"
+                                                        data-bs-dismiss="modal">Nope!Go
+                                                        back
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">1</td>
+                            <td>Graphic Designer</td>
+                            <!--Details-->
+                            <td><a href="#" class="btn btn-sb btn-primary d-block"
+                                    data-bs-target="#employeedetailsModal" data-bs-toggle="modal">Details</a>
+                                <div class="modal fade" id="employeedetailsModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
+                                    style="backdrop-filter: blur(5px)" data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header text-bg-dark" data-bs-theme="dark">
+                                                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Job Details
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body p-0 m-0">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <table id="customTable"
+                                                            class="table table-bordered table-sm small mb-0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th class="w-50 " scope="row">ID</th>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Job Name</th>
+                                                                    <td>Graphic Designer</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button data-bs-toggle="modal" data-bs-target="#editemployeeModel"
+                                                    type="button" class="btn btn-warning btn-sm">
+                                                    Edit Details
+                                                </button>
+                                                <button data-bs-dismiss="modal" type="button"
+                                                    class="btn btn-primary btn-sm">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </th>
+                            </td>
+                            <!--Edit-->
+                            <td><a href="#" class="btn btn-sb btn-warning      d-block"
+                                    data-bs-target="#editemployeeModel" data-bs-toggle="modal">Edit</a>
+                                <div class="modal fade" id="editemployeeModel" style="backdrop-filter: blur(5px)"
+                                    data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header text-bg-dark" data-bs-theme="dark">
+                                                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Job
+                                                    Details</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="row mt-3">
+                                                        <div class="col">
+                                                            <input type="date" class="form-control" value="2009-07-19">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="input-group mb-3">
+                                                            <select class="form-select">
+                                                                <option value="0" disabled>Select Job</option>
+                                                                <option selected>Doctor</option>
+                                                                <option>Teachre</option>
+                                                                <option>Web Developer</option>
+                                                                <option>Programmer</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="container d-flex mb-3">
+                                                <a href="employee.html" type="button" class="btn btn-success w-100 me-3"
+                                                    data-bs-dismiss="modal">Update
+                                                    Job</a> <a href="employee.html" type="button"
+                                                    class="btn btn-warning" data-bs-dismiss="modal">Close</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <!--Delete-->
+                            <td><a href="#" class="btn btn-sb btn-danger d-block" data-bs-target="#deletemployeemodel"
+                                    data-bs-toggle="modal">Delete</a>
+                                <div class="modal fade" style="backdrop-filter: blur(5px)" data-bs-backdrop="static"
+                                    id="deletemployeemodel" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <label class="fw-light fs-4 text-center">Do you want to delete the
+                                                    Job<b>
+                                                        "Graphic Designer" ?
+                                                    </b> </label>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="col-md-12 text-center">
+                                                    <a href="employee.html" type="button" class="btn   btn-danger"
+                                                        data-bs-dismiss="modal">YES!</a>
+                                                    <a href="employee.html" type="button" class="btn btn-warning"
+                                                        data-bs-dismiss="modal">Nope!Go
+                                                        back
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">1</td>
+                            <td>Graphic Designer</td>
+                            <!--Details-->
+                            <td><a href="#" class="btn btn-sb btn-primary d-block"
+                                    data-bs-target="#employeedetailsModal" data-bs-toggle="modal">Details</a>
+                                <div class="modal fade" id="employeedetailsModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
+                                    style="backdrop-filter: blur(5px)" data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header text-bg-dark" data-bs-theme="dark">
+                                                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Job Details
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body p-0 m-0">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <table id="customTable"
+                                                            class="table table-bordered table-sm small mb-0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th class="w-50 " scope="row">ID</th>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Job Name</th>
+                                                                    <td>Graphic Designer</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button data-bs-toggle="modal" data-bs-target="#editemployeeModel"
+                                                    type="button" class="btn btn-warning btn-sm">
+                                                    Edit Details
+                                                </button>
+                                                <button data-bs-dismiss="modal" type="button"
+                                                    class="btn btn-primary btn-sm">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </th>
+                            </td>
+                            <!--Edit-->
+                            <td><a href="#" class="btn btn-sb btn-warning      d-block"
+                                    data-bs-target="#editemployeeModel" data-bs-toggle="modal">Edit</a>
+                                <div class="modal fade" id="editemployeeModel" style="backdrop-filter: blur(5px)"
+                                    data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header text-bg-dark" data-bs-theme="dark">
+                                                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Job
+                                                    Details</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="row mt-3">
+                                                        <div class="col">
+                                                            <input type="date" class="form-control" value="2009-07-19">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="input-group mb-3">
+                                                            <select class="form-select">
+                                                                <option value="0" disabled>Select Job</option>
+                                                                <option selected>Doctor</option>
+                                                                <option>Teachre</option>
+                                                                <option>Web Developer</option>
+                                                                <option>Programmer</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="container d-flex mb-3">
+                                                <a href="employee.html" type="button" class="btn btn-success w-100 me-3"
+                                                    data-bs-dismiss="modal">Update
+                                                    Job</a> <a href="employee.html" type="button"
+                                                    class="btn btn-warning" data-bs-dismiss="modal">Close</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <!--Delete-->
+                            <td><a href="#" class="btn btn-sb btn-danger d-block" data-bs-target="#deletemployeemodel"
+                                    data-bs-toggle="modal">Delete</a>
+                                <div class="modal fade" style="backdrop-filter: blur(5px)" data-bs-backdrop="static"
+                                    id="deletemployeemodel" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <label class="fw-light fs-4 text-center">Do you want to delete the
+                                                    Job<b>
+                                                        "Graphic Designer" ?
+                                                    </b> </label>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="col-md-12 text-center">
+                                                    <a href="employee.html" type="button" class="btn   btn-danger"
+                                                        data-bs-dismiss="modal">YES!</a>
+                                                    <a href="employee.html" type="button" class="btn btn-warning"
+                                                        data-bs-dismiss="modal">Nope!Go
+                                                        back
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

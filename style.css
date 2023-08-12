@@ -1,0 +1,11 @@
+.brandGradient{
+        background: #195CCF;
+        background: linear-gradient(to right, #195CCF 0%, #30CF5A 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+ #customTable th,
+ #customTable td{
+        padding: 0.5rem !important;
+}
